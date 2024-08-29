@@ -1,0 +1,16 @@
+langchain
+streamlit
+pandas
+google.generativeai
+langchain-experimental
+langchain_community
+langchain_google_genai
+langchain-groq
+wikipedia
+python-dotenv
+tiktoken
+pinecone
+pydantic
+PyPDF2
+tabulate
+
