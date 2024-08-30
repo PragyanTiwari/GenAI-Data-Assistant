@@ -9,11 +9,14 @@ from python_dataviz import run_dataviz_agent
 from langchain_core.messages import SystemMessage,HumanMessage
 from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
 load_dotenv()
+
+# calling the model
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest")
 
 st.header("AI Assistant for Data Analyst",divider="rainbow")
 st.write("An AI Assitant for Data Analaysis and Exploration of datasets.")
 
+# creating tabs for streamlit app
 tab_home, tab_EDA, tab_Viz, tab_Chat = st.tabs(["Home", "Explore Dataset", "Visualize Relationships", "ChatBox"])
 
 
@@ -77,18 +80,22 @@ if "collect_pd_response" in st.session_state:
         }
 
     with tab_Viz:
+        
 
-        analysis = st.selectbox("What kind of Analysis you want?",
-                    ("Univariate","Bivariate","Multivariate"))
-        variables,plot = st.columns(2)
+        def var_plot_options():
+            analysis = st.selectbox("What kind of Analysis you want?",
+                    ("Univariate","Bivariate","Multivariate")) 
+            variables,plot = st.columns(2)
 
-        def var_plot_options(analysis):
             with variables:
                 var = st.multiselect("Select the feature to plot",columns)
+            
             with plot:
                 plot_kind = st.selectbox("Select the kind to plot",analysis_dct[analysis])
+
             return var,plot_kind
-        inp_var,inp_plot = var_plot_options(analysis=analysis)
+        
+        inp_var,inp_plot = var_plot_options()
 
         if st.button("click to generate plot"):
             run_dataviz_agent(kind=inp_plot,features=inp_var,dataframe=df)

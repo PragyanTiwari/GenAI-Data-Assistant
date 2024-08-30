@@ -37,6 +37,7 @@ def run_dataviz_agent(kind,features,dataframe,prompt=SYSTEM_PROMPT):
     df=dataframe,
     extra_tools=[python_repl_tool],
     agent_type="tool-calling",
+    allow_dangerous_code=True,
     verbose=True)
 
     input_prompt = prompt.format(kind=kind,

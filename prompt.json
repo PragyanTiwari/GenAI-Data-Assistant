@@ -1,0 +1,13 @@
+
+
+{
+    "df_info_retrieve_desc" :
+            {
+                "feature_Explanation":"info about the explanation of each column of the feature with their unique vals with markdown syntax.",
+                "shape":"shape of the dataframe.",
+                "n_duplicates":"number of duplicate rows in the dataframe.",
+                "correlation":"info about the correlation relationships among the features.",
+                "feature_data_types":"info about the intrepretation of data types of each feature.",
+                "summarize_statistics":"info about the summarization of statistics of the features."
+            }
+} 
