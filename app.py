@@ -2,7 +2,8 @@
 import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
-from langchain_google_genai import ChatGoogleGenerativeAI
+# from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 from pandas_df_agent import DataframeAgent
 from python_dataviz import run_dataviz_agent
@@ -11,7 +12,8 @@ from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe
 load_dotenv()
 
 # calling the model
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest")
+model = ChatGroq(model="llama3-70b-8192",temperature=0.2)
+llm = ChatGroq(model="llama3-70b-8192",temperature=0.2)
 
 st.header("AI Assistant for Data Analyst",divider="rainbow")
 st.write("An AI Assitant for Data Analaysis and Exploration of datasets.")
@@ -127,7 +129,7 @@ if "collect_pd_response" in st.session_state:
                 SystemMessage(content="You're a chatbot. Your task is to have a conversation with the user and answer the user question."),
                 HumanMessage(content=input_prompt)])
 
-            agent = create_pandas_dataframe_agent(llm=llm, df=df, verbose=True)
+            agent = create_pandas_dataframe_agent(llm=llm, df=df, verbose=True,allow_dangerous_code=True)
             agent_response = agent.invoke(prompt_message)
 
             llm_message = {"role": "assistant", "content": agent_response['output']}
