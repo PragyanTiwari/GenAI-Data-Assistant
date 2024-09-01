@@ -4,8 +4,8 @@ import streamlit as st
 
 from langchain.prompts import ChatPromptTemplate
 from langchain.pydantic_v1 import BaseModel,Field
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.output_parsers import PydanticOutputParser
+from langchain_groq import ChatGroq
 
 # importing the field descriptions
 with open("prompt.json","r") as prompt_file:
@@ -23,13 +23,12 @@ class DataframeInfoRetrive(BaseModel):
     summarize_statistics:str = Field(...,description=prompt['summarize_statistics'])
 
 
-
 @st.cache_resource()
 class DataframeAgent:
      def __init__(self,data):
         self.df = data
         self.DataframeInfoRetrive = DataframeInfoRetrive
-        self.llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest",temperature=0.2)
+        self.llm = ChatGroq(model="llama3-70b-8192",temperature=0.2)
 
 
 

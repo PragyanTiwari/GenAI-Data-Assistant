@@ -1,19 +1,41 @@
 # 🤖 GenAI Data Assistant with Gemini API
 
-## Introduction
-Groq API Powered GenAI-Assistant which analyzes data and summarizes the data in a proper format. Two features it provides:
+## 🪼 Introduction
+This project demonstrates the integration of various tools and libraries to create a powerful AI-powered data analysis interface. It leverages the capabilities of LLM,Langchain Agentic Framework,streamlit & Pydantic to provide a comprehensive solution for **exploring**, **analyzing**, and **visualizing** data.
+
+<img src="streamlit img.png" width="1200" height="450">
+
+## 🗃️ About the Project
+This project aims to develop a user-friendly streamlit web application that assists users in understanding and extracting insights from their datasets. Key features include:
+
+- **Data Exploration**: Users can easily explore and analyze their data using the provided tools.
+- **Visualization**: The application generates informative visualizations to help users understand relationships and trends within their data.
+- **Chatbot Interaction**: A chatbot interface allows users to ask questions and receive relevant responses based on their data.
 
 
-## About the Project
-
-- **Explore Dataset** : Explore the dataset with generative summary of the dataset. Interpreting all the descriptive statistics about the dataset using pandas agent.
-
-- **Chatbot** : Chat with your dataset. Attempts to solve simple query conversation.
-
-- **Visualize Relationships** : Generate plots to visualize relationship with the help of generative AI. It uses PythonREPL Tool to generate code and get executed through streamlit.
-
-
-## What is Langchain
-
+## 🦜 Langchain Framework and How it is Used
+Langchain serves as the backbone of this project, providing a framework for building and deploying language models. In this project, we've imported LLAMA3 70B model through [GROQ API](https://groq.com/).
 <img src="flow.png" width="1200" height="450">
-###
+
+Demistifying the workflow:
+The agent uses the Langchain ReACT approach which combines both reasoning and acting. The LLM finds the best approach by observing results and accordingly acts in the way of using tool i.e. PythonREPL Tool for this case.
+
+## 🔮 Accessing the Streamlit App
+
+To access the Streamlit app, follow these steps:
+
+- Clone the repository:
+```shell
+git clone https://github.com/PragyanTiwari/ai-assistant.git
+```
+- Configure the `.env` file:
+```shell
+GROQ_API_KEY = "" # get the groq api key from official website
+```
+- Run the streamlit app in terminal
+```shell
+streamlit run app.py
+```
+
+Once the app is running, you can access it in your web browser.
+

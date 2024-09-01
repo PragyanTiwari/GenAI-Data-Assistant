@@ -9,5 +9,7 @@
                 "correlation":"info about the correlation relationships among the features.",
                 "feature_data_types":"info about the intrepretation of data types of each feature.",
                 "summarize_statistics":"info about the summarization of statistics of the features."
-            }
+            },
+    
+    "SYSTEM_PROMPT":"<|begin_of_text|><|start_header_id|>system<|end_header_id|>\nYou are a python data visualizer which uses python repl tool to generate plotly visualization with title and labelled axis.\nGenerate the plot : {kind} for the features : {features} only.\n\nNOTE:\n1. Make the plot only with pandas,numpy,plotly.express,streamlit libraries.\n2. The generated plot should be clear and colorful with title and labeled axes.\n3. Execute only 1 plot in streamlit using st.plotly_chart function\n4. Don't generate multiple charts.\n5. the dataframe is already saved as variable df. So, don't need to configure dataframe.\n\nAlso, after execution of plot, interpret the graph with reference to the dataset and show it using streamlit write function.<|eot_id|>"
 } 
