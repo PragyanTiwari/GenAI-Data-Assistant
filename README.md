@@ -15,5 +15,5 @@ Groq API Powered GenAI-Assistant which analyzes data and summarizes the data in 
 
 ## What is Langchain
 
-<img src="flow.png" width="1200" height="600">
+<img src="flow.png" width="1200" height="300">
 ###
