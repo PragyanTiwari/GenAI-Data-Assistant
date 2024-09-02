@@ -3,8 +3,6 @@
 ## 🪼 Introduction
 This project demonstrates the integration of various tools and libraries to create a powerful AI-powered data analysis interface. It leverages the capabilities of LLM,Langchain Agentic Framework,streamlit & Pydantic to provide a comprehensive solution for **exploring**, **analyzing**, and **visualizing** data.
 
-<img src="images/streamlit img.png" width="800" height="600">
-
 ## 🗃️ About the Project
 This project aims to develop a user-friendly streamlit web application that assists users in understanding and extracting insights from their datasets. Key features include:
 
@@ -21,7 +19,7 @@ Demistifying the workflow:
 The agent uses the Langchain ReACT approach which combines both reasoning and acting. The LLM finds the best approach by observing results and accordingly acts in the way of using tool i.e. PythonREPL Tool for this case.
 
 ## 🔮 Accessing the Streamlit App
-
+<img src="images/streamlit img.png" width="800" height="700">
 To access the Streamlit app, follow these steps:
 
 - Clone the repository:
