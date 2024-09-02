@@ -1,7 +1,7 @@
 # 🤖 GenAI Data Assistant with Gemini API
 
 ## 🪼 Introduction
-This project demonstrates the integration of various tools and libraries to create a powerful AI-powered data analysis interface. It leverages the capabilities of LLM,Langchain Agentic Framework,streamlit & Pydantic to provide a comprehensive solution for **exploring**, **analyzing**, and **visualizing** data.
+This project demonstrates the integration of various tools and libraries to create a powerful AI-powered data analysis interface. It leverages the capabilities of LLM, Langchain Agentic Framework, Streamlit & Pydantic to provide a comprehensive solution for **exploring**, **analyzing**, and **visualizing** data.
 
 ## 🗃️ About the Project
 This project aims to develop a user-friendly streamlit web application that assists users in understanding and extracting insights from their datasets. Key features include:
@@ -13,6 +13,7 @@ This project aims to develop a user-friendly streamlit web application that assi
 
 ## 🦜 Langchain Framework and How it is Used
 Langchain serves as the backbone of this project, providing a framework for building and deploying language models. In this project, we've imported LLAMA3 70B model through [GROQ API](https://groq.com/).
+
 
 <img src="images/flow.png" width="1000" height="450">
 
