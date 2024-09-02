@@ -1,4 +1,4 @@
-# 🤖 GenAI Data Assistant with Gemini API
+# 🤖 GenAI Data Assistant with LLAMA3-70B
 
 ## 🪼 Introduction
 This project demonstrates the integration of various tools and libraries to create a powerful AI-powered data analysis interface. It leverages the capabilities of LLM, Langchain Agentic Framework, Streamlit & Pydantic to provide a comprehensive solution for **exploring**, **analyzing**, and **visualizing** data.
