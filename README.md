@@ -3,7 +3,7 @@
 ## 🪼 Introduction
 This project demonstrates the integration of various tools and libraries to create a powerful AI-powered data analysis interface. It leverages the capabilities of LLM,Langchain Agentic Framework,streamlit & Pydantic to provide a comprehensive solution for **exploring**, **analyzing**, and **visualizing** data.
 
-<img src="images/streamlit img.png" width="1200" height="450">
+<img src="images/streamlit img.png" width="1000" height="450">
 
 ## 🗃️ About the Project
 This project aims to develop a user-friendly streamlit web application that assists users in understanding and extracting insights from their datasets. Key features include:
