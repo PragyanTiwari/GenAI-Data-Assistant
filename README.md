@@ -13,6 +13,7 @@ This project aims to develop a user-friendly streamlit web application that assi
 
 ## 🦜 Langchain Framework and How it is Used
 Langchain serves as the backbone of this project, providing a framework for building and deploying language models. In this project, we've imported LLAMA3 70B model through [GROQ API](https://groq.com/).
+
 <img src="images/flow.png" width="1000" height="450">
 
 Demistifying the workflow:
